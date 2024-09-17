@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <script>
+        let card = 7;// 場にあるトランプのカード番号
+
+        let Hi_L = 0;// Low(0) と High(1) どっちを選んだか仮の数字（実際にはクリックで決める）
+        let Result = "●●を選んで、あなたの●●";//勝ち負けの結果
+
+        function High_Low(Hi_L) {
+
+            if(Hi_L == 2){
+                document.getElementById("Card_img_Before").src="cards/c" + card + ".png";
+                document.getElementById("Card_img_After").src="cards/bk.png";
+            } else {
+
+                document.getElementById("Card_img_Before").src="cards/c" + card + ".png";
+
+                let trump = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,]; // ハイアンドローをするカード番号
+                let trump_n = Math.floor( Math.random() * 13) +1 ;// ランダムで数字を決める
+
+
+                if (card < trump[trump_n]) {//賭けカードが、伏せカードより大きい場合
+                    if (Hi_L === 0){ Result = "　LOWを選んで、あなたの<span style='background:blue;'>『 負け 』</span>";}
+                    if (Hi_L === 1){ Result = "　HIGHを選んで、あなたの<span style='background:red;'>【 勝ち 】</span>";}
+                }
+
+                else if (card > trump[trump_n]) {//賭けカードが、伏せカードより小さい場合
+                    if (Hi_L === 0){ Result = "　LOWを選んで、あなたの<span style='background:red;'>【 勝ち 】</span>";}
+                    if (Hi_L === 1){ Result = "　HIGHを選んで、あなたの<span style='background:blue;'>『 負け 』</span>";}
+                }
+
+                else {Result = "引き分け！！";}
+
+                document.getElementById("Card_img_After").src="cards/c" + trump_n + ".png";
+
+                document.getElementById("After").innerHTML ="伏せカードは" + trump[trump_n] + Result + "<br />次のカードが今の数字より高いか低いか考えてみよう！";
+                document.getElementById("Before").innerHTML ="場にあるカードは" + card ;
+
+                card = trump[trump_n];//場にあるカードを新しく引いたカードに変える
+            }
+
+        }
+        </script>
+    </head>
+<body>
+	<img id="Card_img_Before" src="cards/c7.png" width="100" height="150" align="left">
+	＊
+	<img id="Card_img_After" src="cards/bk.png" width="100" height="150">
+
+	<p id="Before">場にあるカードは7</p>
+	<p id="After">次のカードは場にあるカードより高いか低いか考えてみよう！</p>
+
+	<input type="button" value="High" onclick="High_Low(1);"/>
+	<input type="button" value="Low" onclick="High_Low(0);"/>
+	<input type="button" value="Reset" onclick="High_Low(2);"/>
+</body>
+</html>

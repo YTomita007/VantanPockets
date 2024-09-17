@@ -1,0 +1,40 @@
+.content {
+    background-color: #fff;
+    width: 600px;
+    margin: 10px auto;
+    padding: 30px;
+}
+
+input {
+    position: relative;
+    display: block;
+    width: 500px;
+    padding: 15px;
+    font-size: 16px;
+    color: #a0a0a0;
+}
+
+textarea {
+    position: relative;
+    display: block;
+    width: 500px;
+    height: 150px;
+    padding: 15px;
+    font-size: 16px;
+    color: #a0a0a0;
+}
+
+button {
+    background-color: #555;
+    color: #fff;
+    padding: 0 20px;
+    margin: 20px 70px;
+    line-height: 36px;
+    float: right;
+    width: 150px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
