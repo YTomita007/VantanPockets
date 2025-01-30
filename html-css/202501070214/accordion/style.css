@@ -1,0 +1,23 @@
+.accordion {
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.accordion-header {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
