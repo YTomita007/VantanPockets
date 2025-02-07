@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.player {
+    display: inline-block;
+    text-align: center;
+}
+
+.controls button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #218838;
+}
+
+.progress input[type="range"] {
+    width: 300px;
+    margin-top: 10px;
+}

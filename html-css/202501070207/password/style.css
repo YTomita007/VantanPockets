@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.password-generator {
+    margin-top: 20px;
+}
+
+#password {
+    font-weight: bold;
+    color: #007bff;
+}

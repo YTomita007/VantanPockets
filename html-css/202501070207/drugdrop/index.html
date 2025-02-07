@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drag & Drop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        <div class="drop-zone" id="drop-zone">
+            <p>Drag and drop items here</p>
+            <input id="fileInput" type="file" accept="image/*" value="ファイルを選択" name="photo" onChange="photoPreview(event)">
+        </div>
+        <button type="submit" name="submit" value="登録">登録<button>
+    </form>
+    <div class="items">
+        <div class="item" draggable="true" id="item1">Item 1</div>
+        <div class="item" draggable="true" id="item2">Item 2</div>
+        <div class="item" draggable="true" id="item3">Item 3</div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
