@@ -1,5 +1,5 @@
 // OpenWeatherMap APIキー (自分のキーをここに追加)
-const apiKey = "22b65002a875fd4b71a5b2f198dac71d";
+const apiKey = "***************************************";
 
 // HTML要素の取得
 const cityInput = document.getElementById("city");
